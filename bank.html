@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghana Commercial bank</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="Ghana.png">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+    	
+      <nav class="nav">
+       
+<img src="logo.jpg" alt="logo" / width="50" height="50">
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link">Home</a>
+            <a href="https://www.g-money.com.gh/" class="nav_link">G-Money</a>
+            <a href="https://www.gcbbank.com.gh/business" class="nav_link">Business</a>
+            <a href="https://www.gcbbank.com.gh/news-from-gcb" class="nav_link">News</a>
+          </li>
+        </ul>
+
+        <button class="button" id="form-open"><b style="color: yellow">Register Now</b></button>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Personal Account</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+
+            <div class="input_box">
+               <i class="uil uil-user"></i>
+              <input type="Name" placeholder="Your FullName" required />
+             
+            </div>
+               <div class="input_box">
+               <i class="uil uil-smile-wink"></i>
+              <input type="number" placeholder="Your Age" required />
+              </div>
+
+               <div class="input_box">
+               <i class="uil uil-location-point"></i>
+              <input type="text" placeholder="Your Address" required />
+             
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div> <br>
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class=""></a>
+            </div>
+
+            <button class="button">Create Account</button>
+
+            <div class="login_signup">Don't have a GMoney account?<a href="https://www.gcbbank.com.gh/downloads/forms/accounts" id="Apply">&nbsp; Apply now</a></div>
+          </form>
+        </div>
+
+
+    </section>
+    
+    <script>
+document.getElementById('createAccount').addEventListener('click', async () => {
+    const customer = {
+        name: "David Ayim Obuobi",
+        email: "ayimobuobi@gmail.com",
+        age: 20
+    };
+    try {
+        const response = await fetch('http://localhost:3000/create-account', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(customer) // send data as JSON
+        });
+        const data = await response.json();
+        console.log('Account created with ID:', data.insertedId);
+    } catch (err) {
+        console.log('An error occured:', err);
+    }
+});
+</script>
+
+    <script src="script.js"></script>
+
+  <marquee><footer>©2021-2025. All rights reserved. DevGenius Team</footer></marquee>
+  </body>
+</html>
