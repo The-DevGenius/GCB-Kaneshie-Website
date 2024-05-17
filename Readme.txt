@@ -2,7 +2,7 @@ Thanks for viewing this website applicatiion!
 
 TeamName: DevGenius
 
-Course: Software Engineering
+Course Name: Software Engineering . Course Code: DCIT208
 
 Client: Derrick Aseidu
 
