@@ -6,4 +6,4 @@ Course: Software Engineering
 
 Client: Derrick Aseidu
 
-TeamLeader: Obuobi David Ayim
+TeamLeader and Developer: Obuobi David Ayim
