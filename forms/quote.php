@@ -23,8 +23,8 @@ $mail->IsSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = 587;
 $mail->SMTPAuth = true;
-$mail->Username = 'bellamerisol@gmail.com';
-$mail->Password = 'Aristocrat1!'; // Replace 'YourGmailPassword' with your Gmail account password
+$mail->Username = '';
+$mail->Password = ''; // Replace 'YourGmailPassword' with your Gmail account password
 $mail->SMTPSecure = 'tls';
 
 // Retrieve form data from $_POST array
